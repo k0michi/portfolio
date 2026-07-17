@@ -37,13 +37,6 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Pull contents out of subdirectory
-        run: |
-          REPO_NAME=${GITHUB_REPOSITORY#*/}
-          mv "build/client/$REPO_NAME"/* build/client/
-          rm -rf "build/client/$REPO_NAME"
-          cp build/client/index.html build/client/404.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

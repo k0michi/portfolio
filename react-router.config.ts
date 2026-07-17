@@ -6,4 +6,5 @@ export default {
     : "/",
 
   prerender: true,
+  ssr: false,
 } satisfies Config;
